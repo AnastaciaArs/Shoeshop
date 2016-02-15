@@ -1,24 +1,26 @@
 package com.iba.shoeshop;
 
 public class MainShop implements ShopInformation {
-	protected int openTime;
-	protected int closeTime;
-	protected double proceeds; //vyruchka
-	protected int countShoes;
-	protected int countBoots;
-	protected int countSandals;
-	protected int countSport;
+	private int openTime;
+	private int closeTime;
+	private double proceeds; //vyruchka
+	private Product product;
 
 	public MainShop (){
 		this.proceeds = 0.0;
-		this.countShoes = 0;
+		this.product = new Product(5,5,5,5);
 		this.openTime = 9;
 		this.closeTime = 20;
-		this.countBoots = 0;
-		this.countSandals = 0;
-		this.countSport = 0;
 	}
 	
+	public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+
 	public int getOpenTime() {
 		return openTime;
 	}
@@ -43,51 +45,10 @@ public class MainShop implements ShopInformation {
 		this.proceeds = proceeds;
 	}
 
-	public int getCountShoes() {
-		return countShoes;
-	}
-
-	public void setCountShoes(int countShoes) {
-		this.countShoes = countShoes;
-	}
-
-	public int getCountBoots() {
-		return countBoots;
-	}
-
-	public void setCountBoots(int countBoots) {
-		this.countBoots = countBoots;
-	}
-
-	public int getCountSandals() {
-		return countSandals;
-	}
-
-	public void setCountSandals(int countSandals) {
-		this.countSandals = countSandals;
-	}
-
-	public int getCountSport() {
-		return countSport;
-	}
-
-	public void setCountSport(int countSport) {
-		this.countSport = countSport;
-	}
-
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Shop [countShoes=").append(countShoes)
-				.append(", countBoots=").append(countBoots)
-				.append(", countSandals=").append(countSandals)
-				.append(", countSport=").append(countSport).append("]");
-		return builder.toString();
-	}
-
 	public void makeProceeds(){
 		double[] price = makePrice();
-		this.proceeds = price[0]*this.countShoes+price[1]*this.countBoots+price[2]*this.countSandals+price[3]*this.countSport;
+		this.proceeds = price[0]*this.product.getCountShoe()+price[1]*this.product.getCountBoots()
+				+price[2]*this.product.getCountSandals()+price[3]*this.product.getCountSport();
 		System.out.println("All proceeds: "+this.proceeds);
 	}
 	

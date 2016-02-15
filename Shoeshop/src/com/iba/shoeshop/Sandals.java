@@ -3,13 +3,10 @@ package com.iba.shoeshop;
 public class Sandals extends ShoeCommon{
 	private boolean isBoot;
 	private boolean isForSwim;
-	
-	public Sandals(String color, int size, Material material, char sex,
-			boolean isForAdult, String manufacture, boolean isHeel,
-			Season season, boolean isNewCollection, boolean isBoot,
-			boolean isForSwim) {
-		super(color, size, material, sex, isForAdult, manufacture, isHeel,
-				season, isNewCollection);
+
+	public Sandals(ShoeFeatures features, Season season, ShoeDetails details,
+			boolean isBoot, boolean isForSwim) {
+		super(features, season, details);
 		this.isBoot = isBoot;
 		this.isForSwim = isForSwim;
 	}
@@ -39,16 +36,15 @@ public class Sandals extends ShoeCommon{
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Sandals [isBoot=").append(isBoot)
-				.append(", isForSwim=").append(isForSwim).append(", color=")
-				.append(color).append(", size=").append(size)
-				.append(", material=").append(material).append(", sex=")
-				.append(sex).append(", isForAdult=").append(isForAdult)
-				.append(", manufacture=").append(manufacture)
-				.append(", isHeel=").append(isHeel).append(", season=")
-				.append(season).append(", isNewCollection=")
-				.append(isNewCollection).append("]");
+				.append(", isForSwim=").append(isForSwim)
+				.append(", getSeason()=").append(getSeason())
+				.append(", getFeatures()=").append(getFeatures())
+				.append(", getDetails()=").append(getDetails())
+				.append("]");
 		return builder.toString();
 	}
+
 	
+
 	
 }

@@ -4,12 +4,9 @@ public class Boots extends ShoeCommon {
 	private boolean isShort;
 	private boolean isRubber; //rezinovyi
 	
-	public Boots(String color, int size, Material material, char sex,
-			boolean isForAdult, String manufacture, boolean isHeel,
-			Season season, boolean isNewCollection, boolean isShort,
-			boolean isRubber) {
-		super(color, size, material, sex, isForAdult, manufacture, isHeel,
-				season, isNewCollection);
+	public Boots(ShoeFeatures features, Season season, ShoeDetails details,
+			boolean isShort, boolean isRubber) {
+		super(features, season, details);
 		this.isShort = isShort;
 		this.isRubber = isRubber;
 	}
@@ -25,19 +22,15 @@ public class Boots extends ShoeCommon {
 	public void setRubber(boolean isRubber) {
 		this.isRubber = isRubber;
 	}
+	
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Boots [isShort=").append(isShort).append(", isRubber=")
-				.append(isRubber).append(", getColor()=").append(getColor())
-				.append(", getSize()=").append(getSize())
-				.append(", getMaterial()=").append(getMaterial())
-				.append(", getSex()=").append(getSex())
-				.append(", isForAdult()=").append(isForAdult())
-				.append(", getManufacture()=").append(getManufacture())
-				.append(", isHeel()=").append(isHeel())
-				.append(", getSeason()=").append(getSeason())
-				.append(", isNewCollection()=").append(isNewCollection()).append("]");
+				.append(isRubber).append(", getSeason()=").append(getSeason())
+				.append(", getFeatures()=").append(getFeatures())
+				.append(", getDetails()=").append(getDetails())
+				.append("]");
 		return builder.toString();
 	}
 	@Override

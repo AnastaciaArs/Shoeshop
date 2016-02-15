@@ -8,8 +8,9 @@ public class BranchShop extends MainShop{
 
 	public void makeProceeds(){
 		double[] price = makePrice();
-		this.proceeds = price[0]*this.countShoes+price[1]*this.countBoots+price[2]*this.countSandals+price[3]*this.countSport;
-		System.out.println("All proceeds: "+this.proceeds);
+		this.setProceeds(price[0]*this.getProduct().getCountShoe()+price[1]*this.getProduct().getCountBoots()
+				+price[2]*this.getProduct().getCountSandals()+price[3]*this.getProduct().getCountSport());
+		System.out.println("All proceeds: "+this.getProceeds());
 	}
 	
 	protected double[] makePrice(){

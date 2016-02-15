@@ -5,10 +5,17 @@ import java.util.Date;
 public class Seller {
 	private String firstName;
 	private String secondName;
-	private int age;
 	private Date startDate;
 	private double salary;
 	
+	public Seller(String firstName, String secondName, Date startDate,
+			double salary) {
+		super();
+		this.firstName = firstName;
+		this.secondName = secondName;
+		this.startDate = startDate;
+		this.salary = salary;
+	}
 	public String getFirstName() {
 		return firstName;
 	}
@@ -21,12 +28,7 @@ public class Seller {
 	public void setSecondName(String secondName) {
 		this.secondName = secondName;
 	}
-	public int getAge() {
-		return age;
-	}
-	public void setAge(int age) {
-		this.age = age;
-	}
+	
 	public Date getStartDate() {
 		return startDate;
 	}
@@ -44,8 +46,8 @@ public class Seller {
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Seller [firstName=").append(firstName)
-				.append(", secondName=").append(secondName).append(", age=")
-				.append(age).append(", startDate=").append(startDate)
+				.append(", secondName=").append(secondName)
+				.append(", startDate=").append(startDate)
 				.append(", salary=").append(salary).append("]");
 		return builder.toString();
 	}

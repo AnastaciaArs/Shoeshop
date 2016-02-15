@@ -1,72 +1,15 @@
 package com.iba.shoeshop;
 
 public abstract class ShoeCommon {
-	protected String color;
-	protected int size;
-	protected Material material;
-	protected char sex;
-	protected boolean isForAdult;
-	protected String manufacture; //proizvoditel'
-	protected boolean isHeel; //kabluk
-	protected Season season;
-	protected boolean isNewCollection;
-	
-	public ShoeCommon(String color, int size, Material material, char sex,
-			boolean isForAdult, String manufacture, boolean isHeel,
-			Season season, boolean isNewCollection) {
+	private ShoeFeatures features;
+	private Season season;
+	private ShoeDetails details;
+		
+	public ShoeCommon(ShoeFeatures features, Season season, ShoeDetails details) {
 		super();
-		this.color = color;
-		this.size = size;
-		this.material = material;
-		this.sex = sex;
-		this.isForAdult = isForAdult;
-		this.manufacture = manufacture;
-		this.isHeel = isHeel;
+		this.features = features;
 		this.season = season;
-		this.isNewCollection = isNewCollection;
-	}
-	
-	public String getColor() {
-		return color;
-	}
-	public void setColor(String color) {
-		this.color = color;
-	}
-	public int getSize() {
-		return size;
-	}
-	public void setSize(int size) {
-		this.size = size;
-	}
-	public Material getMaterial() {
-		return material;
-	}
-	public void setMaterial(Material material) {
-		this.material = material;
-	}
-	public char getSex() {
-		return sex;
-	}
-	public void setSex(char sex) {
-		this.sex = sex;
-	}
-	public boolean isForAdult() {
-		return isForAdult;
-	}
-	public void setForAdult(boolean isForAdult) {
-		this.isForAdult = isForAdult;
-	}
-	public String getManufacture() {
-		return manufacture;
-	}
-	public void setManufacture(String manufacture) {
-		this.manufacture = manufacture;
-	}
-	public boolean isHeel() {
-		return isHeel;
-	}
-	public void setHeel(boolean isHeel) {
-		this.isHeel = isHeel;
+		this.details = details;
 	}
 	public Season getSeason() {
 		return season;
@@ -74,26 +17,27 @@ public abstract class ShoeCommon {
 	public void setSeason(Season season) {
 		this.season = season;
 	}
-	public boolean isNewCollection() {
-		return isNewCollection;
+	
+	public ShoeFeatures getFeatures() {
+		return features;
 	}
-	public void setNewCollection(boolean isNewCollection) {
-		this.isNewCollection = isNewCollection;
+	public void setFeatures(ShoeFeatures features) {
+		this.features = features;
 	}
-
+	public ShoeDetails getDetails() {
+		return details;
+	}
+	public void setDetails(ShoeDetails details) {
+		this.details = details;
+	}
+	
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("ShoeCommon [color=").append(color).append(", size=")
-				.append(size).append(", material=").append(material)
-				.append(", sex=").append(sex).append(", isForAdult=")
-				.append(isForAdult).append(", manufacture=")
-				.append(manufacture).append(", isHeel=").append(isHeel)
-				.append(", season=").append(season)
-				.append(", isNewCollection=").append(isNewCollection)
-				.append("]");
+		builder.append("ShoeCommon [features=").append(features)
+				.append(", season=").append(season).append(", details=")
+				.append(details).append("]");
 		return builder.toString();
 	}
-	
 	public abstract void getInformation();
 }
