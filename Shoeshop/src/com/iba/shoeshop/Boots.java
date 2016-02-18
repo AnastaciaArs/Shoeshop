@@ -5,8 +5,8 @@ public class Boots extends ShoeCommon {
 	private boolean isRubber; //rezinovyi
 	
 	public Boots(ShoeFeatures features, Season season, ShoeDetails details,
-			boolean isShort, boolean isRubber) {
-		super(features, season, details);
+			boolean isShort, boolean isRubber,double price) {
+		super(features, season, details,price);
 		this.isShort = isShort;
 		this.isRubber = isRubber;
 	}
@@ -23,6 +23,7 @@ public class Boots extends ShoeCommon {
 		this.isRubber = isRubber;
 	}
 	
+	
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -30,6 +31,7 @@ public class Boots extends ShoeCommon {
 				.append(isRubber).append(", getSeason()=").append(getSeason())
 				.append(", getFeatures()=").append(getFeatures())
 				.append(", getDetails()=").append(getDetails())
+				.append(", getPrice()=").append(getPrice())
 				.append("]");
 		return builder.toString();
 	}

@@ -45,28 +45,6 @@ public class MainShop implements ShopInformation {
 		this.proceeds = proceeds;
 	}
 
-	public void makeProceeds(){
-		double[] price = makePrice();
-		this.proceeds = price[0]*this.product.getCountShoe()+price[1]*this.product.getCountBoots()
-				+price[2]*this.product.getCountSandals()+price[3]*this.product.getCountSport();
-		System.out.println("All proceeds: "+this.proceeds);
-	}
-	
-	protected double[] makePrice(){
-		double [] price = {1.2,3.0,7.2,1.0};
-		return price;
-	}
-	
-	public double[] makePrice(double pr1,double pr2, double pr3, double pr4){
-		double [] price;
-		price = new double[4];
-		price[0] = pr1;
-		price[1] = pr2;
-		price[2] = pr3;
-		price[3] = pr4;
-		return price;
-	}
-
 	public String getAdress() {
 		return "Minsk, Belarus";
 	}

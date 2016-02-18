@@ -5,8 +5,8 @@ public class Shoe extends ShoeCommon{
 	private boolean isMoccasins;
 	
 	public Shoe(ShoeFeatures features, Season season, ShoeDetails details,
-			boolean isCasual, boolean isMoccasins) {
-		super(features, season, details);
+			boolean isCasual, boolean isMoccasins,double price) {
+		super(features, season, details,price);
 		this.isCasual = isCasual;
 		this.isMoccasins = isMoccasins;
 	}
@@ -31,6 +31,7 @@ public class Shoe extends ShoeCommon{
 				.append(", getSeason()=").append(getSeason())
 				.append(", getFeatures()=").append(getFeatures())
 				.append(", getDetails()=").append(getDetails())
+				.append(", getPrice()=").append(getPrice())
 				.append("]");
 		return builder.toString();
 	}

@@ -6,8 +6,8 @@ public class SportShoe extends ShoeCommon{
 	private boolean isGumshoes;
 	
 	public SportShoe(ShoeFeatures features, Season season, ShoeDetails details,
-			boolean isForRunning, boolean isSnickers, boolean isGumshoes) {
-		super(features, season, details);
+			boolean isForRunning, boolean isSnickers, boolean isGumshoes,double price) {
+		super(features, season, details,price);
 		this.isForRunning = isForRunning;
 		this.isSnickers = isSnickers;
 		this.isGumshoes = isGumshoes;
@@ -46,6 +46,7 @@ public class SportShoe extends ShoeCommon{
 				.append(", getSeason()=").append(getSeason())
 				.append(", getFeatures()=").append(getFeatures())
 				.append(", getDetails()=").append(getDetails())
+				.append(", getPrice()=").append(getPrice())
 				.append("]");
 		return builder.toString();
 	}

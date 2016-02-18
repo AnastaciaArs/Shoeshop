@@ -59,4 +59,30 @@ public class Product {
     public int getCountSport(){
     	return this.sport.length;
     }
+    private void getPriceBoots(){
+    	for(int i=0;i<this.boot.length;i++){
+    		System.out.println(this.boot[i]);
+    	}
+    }
+    private void getPriceSandals(){
+    	for(int i=0;i<this.sandals.length;i++){
+    		System.out.println(this.sandals[i]);
+    	}
+    }
+    private void getPriceShoes(){
+    	for(int i=0;i<this.shoe.length;i++){
+    		System.out.println(this.shoe[i]);
+    	}
+    }
+    private void getPriceSport(){
+    	for(int i=0;i<this.sport.length;i++){
+    		System.out.println(this.sport[i]);
+    	}
+    }
+    public void getAssortiment(){
+    	this.getPriceBoots();
+    	this.getPriceSandals();
+    	this.getPriceShoes();
+    	this.getPriceSport();
+    }
 }
