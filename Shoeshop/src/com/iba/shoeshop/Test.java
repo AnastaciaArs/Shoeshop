@@ -32,10 +32,10 @@ public class Test {
 		product.setShoe(shoe);
 		product.setSandals(sand);
 		shop.setProduct(product);
-		shop.getProduct().getAssortiment();
+		shop.getProduct().printAssortiment();
 		BranchShop br = new BranchShop();
 		br.setProduct(product);
-		br.getProduct().getAssortiment();
+		br.getProduct().printAssortiment();
 	}
 
 }

@@ -47,42 +47,19 @@ public class Product {
 				.append("]");
 		return builder.toString();
 	}
-    public int getCountBoots(){
-    	return this.boot.length;
-    }
-    public int getCountSandals(){
-    	return this.sandals.length;
-    }
-    public int getCountShoe(){
-    	return this.shoe.length;
-    }
-    public int getCountSport(){
-    	return this.sport.length;
-    }
-    private void getPriceBoots(){
-    	for(int i=0;i<this.boot.length;i++){
-    		System.out.println(this.boot[i]);
-    	}
-    }
-    private void getPriceSandals(){
-    	for(int i=0;i<this.sandals.length;i++){
-    		System.out.println(this.sandals[i]);
-    	}
-    }
-    private void getPriceShoes(){
-    	for(int i=0;i<this.shoe.length;i++){
-    		System.out.println(this.shoe[i]);
-    	}
-    }
-    private void getPriceSport(){
-    	for(int i=0;i<this.sport.length;i++){
-    		System.out.println(this.sport[i]);
-    	}
-    }
-    public void getAssortiment(){
-    	this.getPriceBoots();
-    	this.getPriceSandals();
-    	this.getPriceShoes();
-    	this.getPriceSport();
-    }
+	
+	public void printAssortiment(){
+		for (int i=0;i<this.boot.length;i++){
+			System.out.println(boot[i]);
+		}
+		for (int i=0;i<this.shoe.length;i++){
+			System.out.println(shoe[i]);
+		}
+		for (int i=0;i<this.sport.length;i++){
+			System.out.println(sport[i]);
+		}
+		for (int i=0;i<this.sandals.length;i++){
+			System.out.println(sandals[i]);
+		}
+	}
 }
