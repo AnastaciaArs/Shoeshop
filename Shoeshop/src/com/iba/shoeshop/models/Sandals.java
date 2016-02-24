@@ -10,8 +10,8 @@ public class Sandals extends ShoeCommon{
 	private boolean isForSwim;
 
 	public Sandals(ShoeFeatures features, Season season, ShoeDetails details,
-			boolean isBoot, boolean isForSwim, double price) {
-		super(features,  details,price);
+			boolean isBoot, boolean isForSwim, double price,String name) {
+		super(features,  details,price,name);
 		this.isBoot = isBoot;
 		this.isForSwim = isForSwim;
 	}

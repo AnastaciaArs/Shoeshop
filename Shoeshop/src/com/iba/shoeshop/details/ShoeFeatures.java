@@ -10,27 +10,35 @@ public class ShoeFeatures {
 	public String getColor() {
 		return color;
 	}
+	
 	public void setColor(String color) {
 		this.color = color;
 	}
+	
 	public int getSize() {
 		return size;
 	}
+	
 	public void setSize(int size) {
 		this.size = size;
 	}
+	
 	public Material getMaterial() {
 		return material;
 	}
+	
 	public void setMaterial(Material material) {
 		this.material = material;
 	}
+	
 	public Sex getSex() {
 		return sex;
 	}
+	
 	public void setSex(Sex sex) {
 		this.sex = sex;
 	}
+	
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();

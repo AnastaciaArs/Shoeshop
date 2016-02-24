@@ -17,8 +17,8 @@ public class Shoe extends ShoeCommon{
 		this.season = season;
 	}
 	public Shoe(ShoeFeatures features, Season season, ShoeDetails details,
-			boolean isCasual, boolean isMoccasins,double price) {
-		super(features, details,price);
+			boolean isCasual, boolean isMoccasins,double price,String name) {
+		super(features, details,price,name);
 		this.isCasual = isCasual;
 		this.isMoccasins = isMoccasins;
 		this.season = season;

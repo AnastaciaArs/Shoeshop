@@ -5,12 +5,14 @@ public abstract class ShoeCommon {
 	private ShoeFeatures features;
 	private ShoeDetails details;
 	private double price;
+	private String name;
 		
-	public ShoeCommon(ShoeFeatures features, ShoeDetails details,double price) {
+	public ShoeCommon(ShoeFeatures features, ShoeDetails details,double price,String name) {
 		super();
 		this.features = features;
 		this.details = details;
 		this.price = price;
+		this.name = name;
 	}
 		
 	public ShoeFeatures getFeatures() {
@@ -45,4 +47,27 @@ public abstract class ShoeCommon {
 	public void setPrice(double price) {
 		this.price = price;
 	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		ShoeCommon sh = (ShoeCommon) o;
+	    if(this.price==sh.price & this.name.equals(sh.name))
+	    	return true;
+	    else
+	    	return false;
+	    			
+	}
+	@Override
+	public int hashCode(){
+        return (int)this.price+this.name.charAt(0);
+    }
+
 }

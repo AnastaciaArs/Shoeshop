@@ -11,8 +11,8 @@ public class SportShoe extends ShoeCommon{
 	private boolean isGumshoes;
 	
 	public SportShoe(ShoeFeatures features, Season season, ShoeDetails details,
-			boolean isForRunning, boolean isSnickers, boolean isGumshoes,double price) {
-		super(features, details,price);
+			boolean isForRunning, boolean isSnickers, boolean isGumshoes,double price,String name) {
+		super(features, details,price,name);
 		this.isForRunning = isForRunning;
 		this.isSnickers = isSnickers;
 		this.isGumshoes = isGumshoes;
