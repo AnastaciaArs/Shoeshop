@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.HashSet;
 
-import com.iba.shoeshop.NameComparator;
-import com.iba.shoeshop.PriceComparator;
+import com.iba.shoeshop.comparator.NameComparator;
+import com.iba.shoeshop.comparator.PriceComparator;
 import com.iba.shoeshop.details.ShoeCommon;
 
 public class Basket {

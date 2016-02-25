@@ -1,4 +1,4 @@
-package com.iba.shoeshop;
+package com.iba.shoeshop.comparator;
 
 import java.util.Comparator;
 

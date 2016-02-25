@@ -22,8 +22,7 @@ public class Product {
 	}
 	
 	public void addAnyShoe(ShoeCommon sh){
-		this.allShoes [this.count] = sh;
-		this.count += 1;
+		this.allShoes [this.count++] = sh;
 		
 	}
 	
