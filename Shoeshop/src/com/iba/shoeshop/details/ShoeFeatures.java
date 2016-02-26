@@ -7,6 +7,13 @@ public class ShoeFeatures {
 	private Material material;
 	private Sex sex;
 	
+	public ShoeFeatures(){
+		this.color = "yellow";
+		this.size = 35;
+		this.material = Material.LEATHER;
+		this.sex = Sex.MALE;
+	}
+	
 	public String getColor() {
 		return color;
 	}

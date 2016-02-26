@@ -10,6 +10,10 @@ public class Shoe extends ShoeCommon{
 	private boolean isMoccasins;
 	private Season season;
 	
+	public Shoe(ShoeFeatures features,ShoeDetails details,double price,String name){
+		super(features, details,price,name);
+	}
+	
 	public Season getSeason() {
 		return season;
 	}

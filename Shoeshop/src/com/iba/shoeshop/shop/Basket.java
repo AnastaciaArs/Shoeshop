@@ -1,6 +1,7 @@
 package com.iba.shoeshop.shop;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -21,8 +22,8 @@ public class Basket {
 		this.all.add(sh);
 	}
 	
-	public ShoeCommon delete(ShoeCommon sh){
-		return this.all.remove(this.all.indexOf(sh));
+	public void delete(ShoeCommon sh){
+		 this.all.remove(sh);
 	}
 	
 	public void deleteAll(){
@@ -37,28 +38,26 @@ public class Basket {
 		return sum;
 	}
 
-	public void printPrductsSortedByName(){
+	public List<ShoeCommon> getProductsSortedByName(){
 		this.all.sort(new NameComparator());
-		for(Iterator<ShoeCommon> iterator = this.all.iterator(); iterator.hasNext();){
-			ShoeCommon sh  = iterator.next();
-			System.out.println(sh.getName()+" "+sh.getPrice());
-		}
+		return this.all;
 	}
 	
-	public void printPrductsSortedByPrice(){
+	public List<ShoeCommon> getProductsSortedByPrice(){
 		this.all.sort(new PriceComparator());
-		for(Iterator<ShoeCommon> iterator = this.all.iterator(); iterator.hasNext();){
-			ShoeCommon sh  = iterator.next();
-			System.out.println(sh.getName()+" "+sh.getPrice());
-		}
+		return this.all;
 	}
 	
-	public void printUnicProducts(){
+	public Set<ShoeCommon> getUnicProducts(){
 		Set<ShoeCommon> set = new HashSet<ShoeCommon>(this.all);
-		System.out.println(set.size());
-		for(Iterator<ShoeCommon> iterator = set.iterator(); iterator.hasNext();){
-			ShoeCommon sh  = iterator.next();
-			System.out.println(sh.getName()+" "+sh.getPrice());
-		}
+		return set;
 	}
+	
+	public ShoeCommon getByIndex(int index){
+		if (index<0 || index>= this.all.size())
+			throw new InputMismatchException();
+		else
+			return this.all.get(index);
+	}
+	
 }

@@ -6,9 +6,8 @@ public abstract class ShoeCommon {
 	private ShoeDetails details;
 	private double price;
 	private String name;
-		
+			
 	public ShoeCommon(ShoeFeatures features, ShoeDetails details,double price,String name) {
-		super();
 		this.features = features;
 		this.details = details;
 		this.price = price;

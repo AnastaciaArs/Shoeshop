@@ -18,7 +18,7 @@ public class Product {
 	}
 		
 	public int getCount() {
-		return count;
+		return this.count;
 	}
 	
 	public void addAnyShoe(ShoeCommon sh){
@@ -32,5 +32,9 @@ public class Product {
 		builder.append("Product [allShoes=").append(Arrays.toString(allShoes))
 				.append(", count=").append(count).append("]");
 		return builder.toString();
+	}
+
+	public ShoeCommon getByIndex(int index){
+		return this.allShoes[index];
 	}
 }

@@ -6,6 +6,13 @@ public class ShoeDetails {
 	private boolean isHeel; //kabluk
 	private boolean isNewCollection;
 	
+	public ShoeDetails(){
+		this.isForAdult = true;
+		this.isHeel = true;
+		this.isNewCollection = true;
+		this.manufacture = "Minsk";
+	}
+	
 	public boolean isForAdult() {
 		return isForAdult;
 	}
